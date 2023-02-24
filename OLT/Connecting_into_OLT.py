@@ -19,7 +19,7 @@ print("""
        """)
 
 ######## connection variables part
-HUAWEI_DSLAM = {
+HUAWEI_OLT = {
     'device_type': 'huawei',
     'host' : 'Insert_your_OLT_Name' , ## in this section you can add input("insert your  Name OLT or IP address to connect in ")
     'username': 'username', ## In this Line add your username you configured to supervised your OLT
@@ -30,7 +30,7 @@ HUAWEI_DSLAM = {
     'timeout': 300,
     'fast_cli':False,
 }
-connection=ho.HuaweiSmartAXSSH(**HUAWEI_DSLAM)
+connection=ho.HuaweiSmartAXSSH(**HUAWEI_OLT)
 
 ####### Sending command without entering the enable mode 
 card_board = connection.send_command('display board 0\n')
